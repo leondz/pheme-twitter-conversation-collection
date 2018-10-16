@@ -6,18 +6,22 @@ NOTE: Since retrieval of replying tweets has been discontinued in Twitter API v1
 SETUP
 -----
 
-The script is developed using PHP (it was initially intended to run as a web service) and Python (for the back-end to access the Twitter API using the Tweepy library). It is ready to run on a system with PHP installed (i.e., the 'php5-cli' package on UNIX systems, or the equivalent PHP CLI for Windows). However, it does need to define a few settings in order to be able to access Twitter.com and the API. There are basically two steps:
+The script is developed using PHP (it was initially intended to run as a web service) and Python (for the back-end to access the Twitter API using the Tweepy library). It is ready to run on a system with PHP installed (i.e., the 'php5-cli' package on UNIX systems, or the equivalent PHP CLI for Windows). However, it does need to define a few settings in order to be able to access Twitter.com and the API. There are a few basic steps:
 
 1. Create a cookie file to enable web access to replies:
 
 This can be done using Mozilla Firefox and the add-on Cookies Export/Import, which can be installed from:
-https://addons.mozilla.org/en-US/firefox/addon/cookies-exportimport/
+https://addons.mozilla.org/en-US/firefox/addon/cookies-txt/
 
 It is recommended to delete all existing cookies on Firefox before proceeding. Then, you should log in on Twitter.com with some user account. After logging in, click on 'Tool -> Export cookies', and save the file with the name 'cookies.txt'. This file should be copied into the main directory of this script.
 
 2. Add Twitter API credentials to twitter.ini:
 
 This is the Twitter API configuration file. You will see four lines there where you can specify the Twitter API credentials.
+
+3. Create an empty data folder
+
+The system places collected tweets into the "data" subdirectory. Create an empty one with "md data".
 
 -------------
 HOW TO RUN IT
